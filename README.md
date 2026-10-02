@@ -1,6 +1,6 @@
 # Forty Tour
 
-[![Website](https://img.shields.io/badge/Visit_Website-blue?style=flat)](https://github.com/IanToujou/Forty-Tour)
+[![Website](https://img.shields.io/badge/Visit_Website-blue?style=flat)](https://ft.toujou.lu)
 [![License](https://img.shields.io/github/license/IanToujou/Forty-Tour?label=License)](https://github.com/IanToujou/Forty-Tour)
 [![Support](https://img.shields.io/badge/-Support-teal?logo=github)](https://github.com/IanToujou/)
 
