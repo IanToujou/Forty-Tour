@@ -30,11 +30,7 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
                 },
                 tooltip: {
                     content: renderToStaticMarkup(
-                        <BoxTooltip
-                            icon={LucideSquareParking}
-                            title={t("marker.parking.title")}
-                            description={t("marker.parking.description")}
-                        />
+                        <BoxTooltip icon={LucideSquareParking} title={t("marker.parking.title")} description={t("marker.parking.description")} />
                     ),
                 },
             },
@@ -302,7 +298,15 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
                     strokeWidth: "8px",
                 },
                 tooltip: {
-                    content: renderToStaticMarkup(<BoxTooltip icon={LucideBed} title={t("marker.dorm.title")} description={t("marker.dorm.description")} clickable clickLabel={t("label.enter")}/>),
+                    content: renderToStaticMarkup(
+                        <BoxTooltip
+                            icon={LucideBed}
+                            title={t("marker.dorm.title")}
+                            description={t("marker.dorm.description")}
+                            clickable
+                            clickLabel={t("label.enter")}
+                        />
+                    ),
                 },
                 data: { targetNode: "dorm_1" },
             },
@@ -390,7 +394,15 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
                     strokeWidth: "8px",
                 },
                 tooltip: {
-                    content: renderToStaticMarkup(<BoxTooltip icon={LucideBed} title={t("marker.dorm.title")} description={t("marker.dorm.description")} clickable clickLabel={t("label.enter")}/>),
+                    content: renderToStaticMarkup(
+                        <BoxTooltip
+                            icon={LucideBed}
+                            title={t("marker.dorm.title")}
+                            description={t("marker.dorm.description")}
+                            clickable
+                            clickLabel={t("label.enter")}
+                        />
+                    ),
                 },
                 data: { targetNode: "dorm_1" },
             },
@@ -917,5 +929,5 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
             { nodeId: "community_9", position: { yaw: "0deg", pitch: "0deg" } },
             { nodeId: "community_11", position: { yaw: "270deg", pitch: "0deg" } },
         ],
-    }
+    },
 ];

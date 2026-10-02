@@ -2,8 +2,8 @@ import type { TFunction } from "i18next";
 import { MarkersPlugin } from "@photo-sphere-viewer/markers-plugin";
 import { VirtualTourPlugin } from "@photo-sphere-viewer/virtual-tour-plugin";
 import { getTourNodes } from "./getTourNodes";
-import {ComponentProps} from "react";
-import {ReactPhotoSphereViewer} from "react-photo-sphere-viewer";
+import { ComponentProps } from "react";
+import { ReactPhotoSphereViewer } from "react-photo-sphere-viewer";
 
 type Plugins = ComponentProps<typeof ReactPhotoSphereViewer>["plugins"];
 
