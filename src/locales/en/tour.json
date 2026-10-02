@@ -1,6 +1,18 @@
 {
     "meta": {
-        "title": "",
+        "title": "Forty Tour",
         "description": ""
+    },
+    "label": {
+        "enter": "Click to Enter"
+    },
+    "marker": {
+        "parking": {
+            "title": "Free Parking",
+            "description": "Free 24/7 parking during your stay at the fort in case you arrive by car."
+        },
+        "gaming": {
+            "title": "Gaming Room"
+        }
     }
 }

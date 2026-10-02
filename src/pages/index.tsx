@@ -11,7 +11,7 @@ const HomePage: NextPage = () => {
 
     return (
         <>
-            <SeoHead path="/" title={t("meta.title")} description={t("meta.description")} robots="index, follow" />
+            <SeoHead path="/" title={t("meta.title")} description={t("meta.description")} robots="noindex, nofollow" />
             <div>
                 <Header />
                 <SectionHomeBanner />
