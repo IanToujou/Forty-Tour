@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@tailwind utilities;
+@layer theme, base, components, utilities;
+
+@theme {
+    --color-neutral-darker: #263136;
+    --color-neutral-dark: #334750;
+    --color-neutral-medium: #4b616b;
+    --color-neutral-light: #7e9aa6;
+    --color-neutral-lighter: #cae2ed;
+
+    --color-primary-darker: #0d2e3a;
+    --color-primary-dark: #1b4d4f;
+    --color-primary-medium: #14b8a6;
+    --color-primary-light: #7ed5bf;
+    --color-primary-lighter: #c7f5e7;
+
+    --color-secondary-darker: #1b532c;
+    --color-secondary-dark: #62c043;
+    --color-secondary-medium: #93dc32;
+    --color-secondary-light: #b7f565;
+    --color-secondary-lighter: #dfffb4;
+
+    --font-manrope: "Manrope", sans-serif;
+    --font-outfit: "Outfit", sans-serif;
+
+    --default-font-family: "Manrope", sans-serif;
+
+    --breakpoint-xs: 30rem;
+    --breakpoint-2xl: 100rem;
+    --breakpoint-3xl: 120rem;
+    --breakpoint-4xl: 140rem;
+}
+
+* {
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--color-white);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.psv-tooltip {
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+.psv-tooltip-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-shadow: none !important;
+}
+
+.psv-tooltip-arrow {
+    display: none !important;
+}
+
+.psv-loader-canvas,
+.psv-loader svg,
+.psv-loader-text {
+    display: none !important;
+}
