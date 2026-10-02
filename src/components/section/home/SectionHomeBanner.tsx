@@ -2,8 +2,11 @@ import Link from "next/link";
 import { LucidePlay } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import {useTranslation} from "react-i18next";
 
 export const SectionHomeBanner = () => {
+    const { t } = useTranslation("home");
+
     return (
         <div>
             <div className="absolute -z-10 h-screen w-screen bg-black select-none">
@@ -16,7 +19,7 @@ export const SectionHomeBanner = () => {
                     transition={{ duration: 0.2, ease: "easeOut" }}
                     className="font-outfit text-primary-medium text-4xl font-medium"
                 >
-                    Welcome to
+                    {t("banner.welcome")}
                 </motion.p>
                 <motion.h1
                     initial={{ opacity: 0, translateY: -30 }}
@@ -30,7 +33,7 @@ export const SectionHomeBanner = () => {
                     href="/tour"
                     className="bg-primary-medium hover:bg-primary-dark group mt-10 flex cursor-pointer items-center gap-x-4 rounded-full px-6 py-3 text-white duration-200"
                 >
-                    <p className="text-lg font-bold">Start Virtual Tour</p>
+                    <p className="text-lg font-bold">{t("banner.button")}</p>
                     <LucidePlay className="duration-400 group-hover:rotate-360" />
                 </Link>
             </div>

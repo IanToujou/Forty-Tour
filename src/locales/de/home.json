@@ -1,0 +1,10 @@
+{
+    "meta": {
+        "title": "Forty Tour",
+        "description": "Eine virtuelle 360° tour vom Forty 2 Campus auf der Oléron Insel. Erkunde den Campus und interagiere mit verschiedenen Bereichen selbst."
+    },
+    "banner": {
+        "welcome": "Willkommen bei",
+        "button": "Start Virtual Tour"
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "meta": {
+        "title": "Forty Tour",
+        "description": "Eine virtuelle 360° tour vom Forty 2 Campus auf der Oléron Insel. Erkunde den Campus und interagiere mit verschiedenen Bereichen selbst."
+    },
+    "label": {
+        "enter": "Zum Betreten klicken"
+    },
+    "node": {
+        "parking": "Parkplatz",
+        "entrance": "Haupteingang",
+        "center": "Außenbereich Mitte",
+        "west": "Außenbereich Westseite",
+        "east": "Außenbereich Ostseite",
+        "volleyball": "Volleyballfeld",
+        "cluster": "Cluster 1",
+        "gaming_front": "Gaming-Raum Vorne",
+        "gaming_back": "Gaming-Raum Hinten",
+        "dorm": "Schlafzimer 4",
+        "community_back": "Hintereingang Community",
+        "community_floor_1": "Community 1. Stock",
+        "community_floor_2": "Community 2. Stock",
+        "refectory_main": "Mensa Hauptsaal",
+        "refectory_side": "Mensa Nebensaal"
+    },
+    "marker": {
+        "parking": {
+            "title": "Kostenloser Parkplatz",
+            "description": "Kostenloses Parken rund um die Uhr während deines Aufenthalts im Fort, falls du mit dem Auto anreist."
+        },
+        "gaming": {
+            "title": "Gaming-Raum",
+            "description": "Der Gaming-Raum ist rund um die Uhr geöffnet. Hier kannst du jederzeit Filme schauen oder einfach spielen, auch Videospiele."
+        },
+        "community": {
+            "title": "Community-Gebäude",
+            "description": "Ob Karaoke am Abend, ein Film oder einfach eine Community-Veranstaltung: Hier triffst du die anderen meistens an."
+        },
+        "cluster": {
+            "title": "Cluster",
+            "description": "Die Cluster sind jederzeit geöffnet, falls du etwas arbeiten möchtest."
+        },
+        "dorm": {
+            "title": "Wohnheim 4",
+            "description": "Zzzzz..."
+        },
+        "refectory": {
+            "title": "Mensa",
+            "description": "In der Mensa werden dreimal am Tag Mahlzeiten serviert."
+        }
+    }
+}

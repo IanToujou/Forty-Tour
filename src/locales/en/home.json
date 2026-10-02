@@ -2,5 +2,9 @@
     "meta": {
         "title": "Forty Tour",
         "description": "A virtual 360° tour of the Forty 2 campus on the Oléron Island. Explore the campus and interact with different areas on your own."
+    },
+    "banner": {
+        "welcome": "Welcome to",
+        "button": "Start Virtual Tour"
     }
 }

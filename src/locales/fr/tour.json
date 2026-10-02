@@ -1,0 +1,52 @@
+{
+    "meta": {
+        "title": "Forty Tour",
+        "description": "Une visite virtuelle à 360° du campus Forty 2 sur l'île d'Oléron. Explorez le campus et interagissez librement avec les différents espaces."
+    },
+    "label": {
+        "enter": "Cliquez pour entrer"
+    },
+    "node": {
+        "parking": "Parking Extérieur",
+        "entrance": "Entrée Principale",
+        "center": "Extérieur Centre",
+        "west": "Extérieur Côté Ouest",
+        "east": "Extérieur Côté Est",
+        "volleyball": "Terrain Volley-Ball",
+        "cluster": "Cluster 1",
+        "gaming_front": "Salle de Jeux Avant",
+        "gaming_back": "Salle de Jeux Arrière",
+        "dorm": "Dortoir 4",
+        "community_back": "Community Entrée Arrière",
+        "community_floor_1": "Community 1er étage",
+        "community_floor_2": "Community 2e étage",
+        "refectory_main": "Réfectoire Salle Principale",
+        "refectory_side": "Réfectoire Salle Latérale"
+    },
+    "marker": {
+        "parking": {
+            "title": "Parking gratuit",
+            "description": "Parking gratuit 24h/24 pendant votre séjour au fort si vous venez en voiture."
+        },
+        "gaming": {
+            "title": "Salle de jeux",
+            "description": "La salle de jeux est ouverte 24h/24. Vous pouvez y regarder des films ou simplement jouer, notamment aux jeux vidéo."
+        },
+        "community": {
+            "title": "Bâtiment Community",
+            "description": "Karaoké le soir, film ou événement communautaire. C'est généralement là que tout le monde se retrouve."
+        },
+        "cluster": {
+            "title": "Clusters",
+            "description": "Les clusters sont ouverts à toute heure et prêts à l'emploi si vous souhaitez travailler."
+        },
+        "dorm": {
+            "title": "Dortoir 4",
+            "description": "Zzzzz..."
+        },
+        "refectory": {
+            "title": "Réfectoire",
+            "description": "Le réfectoire où les repas sont servis 3 fois par jour."
+        }
+    }
+}
