@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from "next";
-import {useMemo, useRef, useState} from "react";
+import { useMemo, useRef, useState } from "react";
 import { VirtualTourPlugin } from "@photo-sphere-viewer/virtual-tour-plugin";
 import "@photo-sphere-viewer/virtual-tour-plugin/index.css";
 import { MarkersPlugin } from "@photo-sphere-viewer/markers-plugin";
@@ -14,7 +14,8 @@ import { BoxLocation } from "@/components/box/BoxLocation";
 import { AnimatePresence, motion } from "framer-motion";
 import { HeaderTour } from "@/components/common/header/HeaderTour";
 import { createPortal } from "react-dom";
-import {getTourPlugins} from "@/lib/getTourPlugins";
+import { getTourPlugins } from "@/lib/getTourPlugins";
+import { TourNode } from "@/lib/getTourNodes";
 
 const TourPage: NextPage = () => {
     const { t } = useTranslation("tour");
@@ -29,25 +30,26 @@ const TourPage: NextPage = () => {
     const handleReady = (instance: Viewer) => {
         instanceRef.current = instance;
 
-        const markersPlugin = instance.getPlugin(MarkersPlugin);
-        const virtualTourPlugin = instance.getPlugin(VirtualTourPlugin);
+        const markersPlugin = instance.getPlugin<MarkersPlugin>(MarkersPlugin);
+        const virtualTourPlugin = instance.getPlugin<VirtualTourPlugin>(VirtualTourPlugin);
 
         if (markersPlugin) {
             markersPlugin.addEventListener("select-marker", ({ marker }) => {
                 const targetNode = marker.data?.targetNode;
                 if (targetNode && virtualTourPlugin) {
-                    virtualTourPlugin.setCurrentNode(targetNode);
+                    virtualTourPlugin.setCurrentNode(targetNode).then();
                 }
             });
         }
 
         if (virtualTourPlugin) {
             virtualTourPlugin.addEventListener("node-changed", ({ node }) => {
-                setLocation(node.name ?? "");
-                if (node.mapPosition) setMapPosition(node.mapPosition);
+                const { name, mapPosition } = node as TourNode;
+                setLocation(name ?? "");
+                if (mapPosition) setMapPosition(mapPosition);
             });
 
-            const currentNode = virtualTourPlugin.getCurrentNode();
+            const currentNode = virtualTourPlugin.getCurrentNode() as TourNode | undefined;
             if (currentNode) {
                 setLocation(currentNode.name ?? "");
                 if (currentNode.mapPosition) setMapPosition(currentNode.mapPosition);
@@ -81,6 +83,7 @@ const TourPage: NextPage = () => {
                     navbar={false}
                     maxFov={80}
                     minFov={30}
+                    src={undefined as unknown as string}
                 />
                 <div className="pointer-events-auto absolute top-0 left-0 z-1000 w-screen">
                     <HeaderTour />
