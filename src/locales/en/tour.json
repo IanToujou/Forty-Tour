@@ -6,13 +6,47 @@
     "label": {
         "enter": "Click to Enter"
     },
+    "node": {
+        "parking": "Outside Parking",
+        "entrance": "Main Entrance",
+        "center": "Outside Center",
+        "west": "Outside West Side",
+        "east": "Outside East Side",
+        "volleyball": "Volleyball Court",
+        "cluster": "Cluster 1",
+        "gaming_front": "Gaming Room Front",
+        "gaming_back": "Gaming Room Back",
+        "dorm": "Dormitory 4",
+        "community_back": "Community Back Entrance",
+        "community_floor_1": "Community 1st Floor",
+        "community_floor_2": "Community 2nd Floor",
+        "refectory_main": "Refectory Main Hall",
+        "refectory_side": "Refectory Side Hall"
+    },
     "marker": {
         "parking": {
             "title": "Free Parking",
             "description": "Free 24/7 parking during your stay at the fort in case you arrive by car."
         },
         "gaming": {
-            "title": "Gaming Room"
+            "title": "Gaming Room",
+            "description": "The gaming room is open 24/7 and can always be used to watch movies or just play games, including videogames."
+        },
+        "community": {
+            "title": "Community Building",
+            "description": "Whether its karaoke at night, watching a movie or just a community event, this is the place they are usually at."
+        },
+        "cluster": {
+            "title": "Clusters",
+            "description": "The clusters are open at any time and ready if you decide to do some work."
+        },
+        "dorm": {
+            "title": "Dormitory 4",
+            "description": "Zzzzz..."
+        },
+        "refectory": {
+            "title": "Refectory",
+            "description": "Refectory where meals are served 3 times per day."
         }
     }
 }

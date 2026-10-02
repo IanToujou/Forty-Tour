@@ -5,4 +5,5 @@ export type BoxTooltipProps = {
     description: string;
     icon: LucideIcon;
     clickable?: boolean;
+    clickLabel?: string;
 };
