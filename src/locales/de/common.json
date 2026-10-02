@@ -1,0 +1,20 @@
+{
+    "locale": {
+        "en": "English",
+        "de": "Deutsch",
+        "fr": "Français"
+    },
+    "footer": {
+        "description": "Der Forty2-Campus gehört zur School 42. Diese Website steht in keiner Weise mit ihr in Verbindung.",
+        "about": {
+            "title": "Über Uns",
+            "privacy": "Datenschutz",
+            "legal": "Impressum"
+        },
+        "tour": {
+            "title": "Virtueller Rundgang",
+            "map": "Interaktive Karte",
+            "poi": "Interessante Orte"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "locale": {
+        "en": "English",
+        "de": "Deutsch",
+        "fr": "Français"
+    },
+    "footer": {
+        "description": "Le campus Forty2 appartient à l'École 42. Ce site n'est affilié à celle-ci d'aucune manière.",
+        "about": {
+            "title": "À propos",
+            "privacy": "Confidentialité",
+            "legal": "Mentions légales"
+        },
+        "tour": {
+            "title": "Visite virtuelle",
+            "map": "Carte interactive",
+            "poi": "Points d'intérêt"
+        }
+    }
+}

@@ -3,5 +3,18 @@
         "en": "English",
         "de": "Deutsch",
         "fr": "Français"
+    },
+    "footer": {
+        "description": "The Forty2 campus belongs to School 42. This website is not affiliated with them in any way.",
+        "about": {
+            "title": "About",
+            "privacy": "Privacy Policy",
+            "legal": "Legal"
+        },
+        "tour": {
+            "title": "Digital Tour",
+            "map": "Interactive Map",
+            "poi": "Points of Interest"
+        }
     }
 }
