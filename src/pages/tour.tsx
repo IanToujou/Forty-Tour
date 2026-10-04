@@ -15,10 +15,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { HeaderTour } from "@/components/common/header/HeaderTour";
 import { createPortal } from "react-dom";
 import { getTourPlugins } from "@/lib/getTourPlugins";
-import { TourNode } from "@/lib/getTourNodes";
+import { getTourNodes, TourNode } from "@/lib/getTourNodes";
 
 const TourPage: NextPage = () => {
     const { t } = useTranslation("tour");
+    const nodes = useMemo(() => getTourNodes(t), [t]);
     const plugins = useMemo(() => getTourPlugins(t), [t]);
 
     const instanceRef = useRef<Viewer | null>(null);
@@ -26,6 +27,11 @@ const TourPage: NextPage = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [loaderNode, setLoaderNode] = useState<Element | null>(null);
     const [mapPosition, setMapPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
+    const handleNodeClick = (node: TourNode) => {
+        const virtualTourPlugin = instanceRef.current?.getPlugin<VirtualTourPlugin>(VirtualTourPlugin);
+        virtualTourPlugin?.setCurrentNode(node.id).then();
+    };
 
     const handleReady = (instance: Viewer) => {
         instanceRef.current = instance;
@@ -90,7 +96,7 @@ const TourPage: NextPage = () => {
                 </div>
                 <div className="pointer-events-auto absolute bottom-8 left-8 z-1000 flex flex-col gap-y-4">
                     <BoxLocation name={location} />
-                    <BoxMap x={mapPosition.x} y={mapPosition.y} zoom={0.5} />
+                    <BoxMap x={mapPosition.x} y={mapPosition.y} zoom={0.5} nodes={nodes} onNodeClick={handleNodeClick} />
                 </div>
                 {loaderNode &&
                     createPortal(
