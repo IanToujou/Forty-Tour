@@ -5,7 +5,7 @@ export const Footer = () => {
     const { t } = useTranslation("common");
 
     return (
-        <footer className="w-full bg-white px-24 py-12">
+        <footer className="w-full bg-white lg:px-24 px-12 py-12">
             <div className="flex w-full flex-col items-start justify-between gap-12 lg:flex-row">
                 <div className="flex max-w-sm flex-col gap-y-3">
                     <h6 className="font-outfit text-2xl font-bold">Forty Tour</h6>
