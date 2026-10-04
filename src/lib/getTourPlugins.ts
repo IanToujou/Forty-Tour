@@ -13,6 +13,7 @@ export const getTourPlugins = (t: TFunction<"tour">): Plugins => [
         VirtualTourPlugin,
         {
             renderMode: "3d",
+            preload: true,
             transitionOptions: { showLoader: true, speed: "20rpm", effect: "fade", rotation: true },
             arrowStyle: {
                 size: { width: 60, height: 60 },
