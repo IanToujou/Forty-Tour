@@ -6,7 +6,7 @@ const SeoHead = ({
     path,
     title,
     description,
-    image = "https://forty-tour.com/img/meta/banner.jpg",
+    image = "https://ft.toujou.lu/img/meta/banner.jpg",
     robots = "index, follow",
     ogType = "website",
     jsonLd,

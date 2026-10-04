@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-const DOMAIN = "https://forty-tour.com";
+const DOMAIN = "https://ft.toujou.lu";
 const LOCALES = ["en", "de", "fr"] as const;
 type LocaleCode = (typeof LOCALES)[number];
 
