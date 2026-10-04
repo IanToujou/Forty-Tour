@@ -3,6 +3,10 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { SvgMap } from "@/components/svg/SvgMap";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 
+const CONE_RADIUS = 36;
+const CONE_HALF_ANGLE = 30;
+const MAP_NORTH_OFFSET = 90;
+
 const COLLAPSED = { width: 328, height: 192 };
 const EXPANDED = { width: 590, height: 345 };
 const HIDDEN_NODES = [/^community_/];
@@ -40,9 +44,19 @@ export const BoxMap = (props: BoxMapProps) => {
     const y = useMotionValue(0);
     const scale = useMotionValue(zoom);
     const markerScale = useTransform(scale, (s) => 1 / s);
+    const rotation = useMotionValue(0);
 
     const size = hovered ? EXPANDED : COLLAPSED;
     const lastSize = useRef(COLLAPSED);
+
+    const coneRad = (CONE_HALF_ANGLE * Math.PI) / 180;
+    const coneX = Math.sin(coneRad) * CONE_RADIUS;
+    const coneY = Math.cos(coneRad) * CONE_RADIUS;
+    const CONE_PATH = `M ${CONE_RADIUS} ${CONE_RADIUS} L ${CONE_RADIUS - coneX} ${CONE_RADIUS - coneY} A ${CONE_RADIUS} ${CONE_RADIUS} 0 0 1 ${CONE_RADIUS + coneX} ${CONE_RADIUS - coneY} Z`;
+
+    useEffect(() => {
+        rotation.set(((props.yaw ?? 0) * 180) / Math.PI + MAP_NORTH_OFFSET);
+    }, [props.yaw, rotation]);
 
     useEffect(() => {
         animate(scale, zoom, transition);
@@ -157,6 +171,38 @@ export const BoxMap = (props: BoxMapProps) => {
                     );
                 })}
                 <div className="pointer-events-none absolute" style={{ left: props.x, top: props.y }}>
+                    <motion.div
+                        className="absolute"
+                        style={{
+                            width: CONE_RADIUS * 2,
+                            height: CONE_RADIUS * 2,
+                            top: -CONE_RADIUS,
+                            left: -CONE_RADIUS,
+                            scale: markerScale,
+                        }}
+                    >
+                        <motion.svg
+                            width={CONE_RADIUS * 2}
+                            height={CONE_RADIUS * 2}
+                            viewBox={`0 0 ${CONE_RADIUS * 2} ${CONE_RADIUS * 2}`}
+                            style={{ rotate: rotation }}
+                            className="text-primary-medium overflow-visible"
+                        >
+                            <defs>
+                                <radialGradient
+                                    id="box-map-cone"
+                                    gradientUnits="userSpaceOnUse"
+                                    cx={CONE_RADIUS}
+                                    cy={CONE_RADIUS}
+                                    r={CONE_RADIUS}
+                                >
+                                    <stop offset="0%" stopColor="currentColor" stopOpacity="0.7" />
+                                    <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+                                </radialGradient>
+                            </defs>
+                            <path d={CONE_PATH} fill="url(#box-map-cone)" />
+                        </motion.svg>
+                    </motion.div>
                     <motion.div
                         className="bg-primary-medium absolute -top-1.5 -left-1.5 size-3 rounded-full ring-2 ring-white"
                         style={{ scale: markerScale }}

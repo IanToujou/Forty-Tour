@@ -27,6 +27,7 @@ const TourPage: NextPage = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [loaderNode, setLoaderNode] = useState<Element | null>(null);
     const [mapPosition, setMapPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+    const [yaw, setYaw] = useState(0);
 
     const handleNodeClick = (node: TourNode) => {
         const virtualTourPlugin = instanceRef.current?.getPlugin<VirtualTourPlugin>(VirtualTourPlugin);
@@ -38,6 +39,9 @@ const TourPage: NextPage = () => {
 
         const markersPlugin = instance.getPlugin<MarkersPlugin>(MarkersPlugin);
         const virtualTourPlugin = instance.getPlugin<VirtualTourPlugin>(VirtualTourPlugin);
+
+        instance.addEventListener("position-updated", ({ position }) => setYaw(position.yaw));
+        setYaw(instance.getPosition().yaw);
 
         if (markersPlugin) {
             markersPlugin.addEventListener("select-marker", ({ marker }) => {
@@ -96,7 +100,7 @@ const TourPage: NextPage = () => {
                 </div>
                 <div className="pointer-events-auto absolute bottom-8 left-8 z-1000 flex flex-col gap-y-4">
                     <BoxLocation name={location} />
-                    <BoxMap x={mapPosition.x} y={mapPosition.y} zoom={0.5} nodes={nodes} onNodeClick={handleNodeClick} />
+                    <BoxMap x={mapPosition.x} y={mapPosition.y} zoom={0.5} yaw={yaw} nodes={nodes} onNodeClick={handleNodeClick} />
                 </div>
                 {loaderNode &&
                     createPortal(
