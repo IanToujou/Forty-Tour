@@ -6,7 +6,7 @@ const SeoHead = ({
     path,
     title,
     description,
-    image = "https://forty-tour.com/img/meta/logo.png",
+    image = "https://forty-tour.com/img/meta/banner.jpg",
     robots = "index, follow",
     ogType = "website",
     jsonLd,
@@ -30,6 +30,9 @@ const SeoHead = ({
             <meta property="og:image" content={image} />
             <meta property="og:description" content={description} />
             <meta property="og:locale" content={ogLocale} />
+            <meta property="og:image:width" content="2099" />
+            <meta property="og:image:height" content="1047" />
+            <meta name="twitter:card" content="summary_large_image" />
             {ogAlternates.map((alt) => (
                 <meta key={alt} property="og:locale:alternate" content={alt} />
             ))}
