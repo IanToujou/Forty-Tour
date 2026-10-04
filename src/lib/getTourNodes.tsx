@@ -418,7 +418,7 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
         id: "kitchen_1",
         name: t("node.refectory_main"),
         panorama: "/img/tour/kitchen_1.jpg",
-        mapPosition: { x: 171, y: 470 },
+        mapPosition: { x: 162, y: 474 },
         links: [
             { nodeId: "outside_34", position: { yaw: "0deg", pitch: "0deg" } },
             { nodeId: "kitchen_2", position: { yaw: "180deg", pitch: "0deg" } },
@@ -429,7 +429,7 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
         id: "kitchen_2",
         name: t("node.refectory_main"),
         panorama: "/img/tour/kitchen_2.jpg",
-        mapPosition: { x: 115, y: 489 },
+        mapPosition: { x: 91, y: 497 },
         links: [
             { nodeId: "kitchen_1", position: { yaw: "0deg", pitch: "0deg" } },
             { nodeId: "kitchen_3", position: { yaw: "270deg", pitch: "0deg" } },
@@ -439,14 +439,14 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
         id: "kitchen_3",
         name: t("node.refectory_side"),
         panorama: "/img/tour/kitchen_3.jpg",
-        mapPosition: { x: 101, y: 454 },
+        mapPosition: { x: 76, y: 457 },
         links: [{ nodeId: "kitchen_2", position: { yaw: "90deg", pitch: "0deg" } }],
     },
     {
         id: "kitchen_4",
         name: t("node.refectory_side"),
         panorama: "/img/tour/kitchen_4.jpg",
-        mapPosition: { x: 158, y: 438 },
+        mapPosition: { x: 149, y: 438 },
         links: [{ nodeId: "kitchen_1", position: { yaw: "90deg", pitch: "0deg" } }],
     },
     {
