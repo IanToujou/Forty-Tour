@@ -2,7 +2,7 @@ import Link from "next/link";
 import { LucidePlay } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 export const SectionHomeBanner = () => {
     const { t } = useTranslation("home");
