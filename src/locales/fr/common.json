@@ -13,8 +13,8 @@
         },
         "tour": {
             "title": "Visite virtuelle",
-            "map": "Carte interactive",
-            "poi": "Points d'intérêt"
+            "start": "Démarrer Visite",
+            "map": "Carte interactive"
         }
     }
 }

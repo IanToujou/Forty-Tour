@@ -13,8 +13,8 @@
         },
         "tour": {
             "title": "Virtueller Rundgang",
-            "map": "Interaktive Karte",
-            "poi": "Interessante Orte"
+            "start": "Rundgang Starten",
+            "map": "Interaktive Karte"
         }
     }
 }

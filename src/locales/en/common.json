@@ -13,8 +13,8 @@
         },
         "tour": {
             "title": "Digital Tour",
-            "map": "Interactive Map",
-            "poi": "Points of Interest"
+            "start": "Start Tour",
+            "map": "Interactive Map"
         }
     }
 }

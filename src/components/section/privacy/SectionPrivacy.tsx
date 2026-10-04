@@ -17,7 +17,7 @@ export const SectionPrivacy = () => {
                     <div className="mt-12 flex flex-col gap-10">
                         <div className="border-primary-medium border-l-2 pl-6">
                             <h2 className="font-outfit text-neutral-darker text-xl font-semibold md:text-2xl">1. Controller</h2>
-                            <p className="font-manrope text-neutral-medium mt-3 text-base leading-relaxed text-justify">
+                            <p className="font-manrope text-neutral-medium mt-3 text-justify text-base leading-relaxed">
                                 This website is operated by Ian Bour, Luxembourg, contact: legal@toujou.lu. We are the controller responsible for the
                                 processing of personal data described in this policy.
                             </p>
@@ -25,7 +25,7 @@ export const SectionPrivacy = () => {
 
                         <div className="border-primary-medium border-l-2 pl-6">
                             <h2 className="font-outfit text-neutral-darker text-xl font-semibold md:text-2xl">2. Data We Process</h2>
-                            <p className="font-manrope text-neutral-medium mt-3 text-base leading-relaxed text-justify">
+                            <p className="font-manrope text-neutral-medium mt-3 text-justify text-base leading-relaxed">
                                 We do not offer user accounts or contact forms, and we do not use analytics or tracking tools. When you visit this
                                 website, our web server automatically records standard server log data, including:
                             </p>
@@ -40,7 +40,7 @@ export const SectionPrivacy = () => {
 
                         <div className="border-primary-medium border-l-2 pl-6">
                             <h2 className="font-outfit text-neutral-darker text-xl font-semibold md:text-2xl">3. Purpose and Legal Basis</h2>
-                            <p className="font-manrope text-neutral-medium mt-3 text-base leading-relaxed text-justify">
+                            <p className="font-manrope text-neutral-medium mt-3 text-justify text-base leading-relaxed">
                                 We process this data solely to ensure the security, stability, and proper functioning of the website, for example to
                                 detect and prevent abuse and to diagnose technical errors. The legal basis is our legitimate interest pursuant to Art.
                                 6(1)(f) GDPR.
@@ -49,7 +49,7 @@ export const SectionPrivacy = () => {
 
                         <div className="border-primary-medium border-l-2 pl-6">
                             <h2 className="font-outfit text-neutral-darker text-xl font-semibold md:text-2xl">4. Retention</h2>
-                            <p className="font-manrope text-neutral-medium mt-3 text-base leading-relaxed text-justify">
+                            <p className="font-manrope text-neutral-medium mt-3 text-justify text-base leading-relaxed">
                                 Server log files are automatically deleted after 30 days.
                             </p>
                         </div>
@@ -58,7 +58,7 @@ export const SectionPrivacy = () => {
                             <h2 className="font-outfit text-neutral-darker text-xl font-semibold md:text-2xl">
                                 5. Content Delivery and Security (Cloudflare)
                             </h2>
-                            <p className="font-manrope text-neutral-medium mt-3 text-base leading-relaxed text-justify">
+                            <p className="font-manrope text-neutral-medium mt-3 text-justify text-base leading-relaxed">
                                 We use Cloudflare, Inc. as a content delivery network and security service. When you access this website, your
                                 requests are routed through Cloudflare&apos;s infrastructure, which processes your IP address and request data in
                                 order to deliver and protect the site. Such processing may involve transfers of data to countries outside the European
@@ -78,7 +78,7 @@ export const SectionPrivacy = () => {
 
                         <div className="border-primary-medium border-l-2 pl-6">
                             <h2 className="font-outfit text-neutral-darker text-xl font-semibold md:text-2xl">6. Fonts (Google Fonts)</h2>
-                            <p className="font-manrope text-neutral-medium mt-3 text-base leading-relaxed text-justify">
+                            <p className="font-manrope text-neutral-medium mt-3 text-justify text-base leading-relaxed">
                                 This website uses fonts provided by Google Fonts, a service of Google Ireland Limited. When you visit a page, your
                                 browser loads the fonts directly from Google&apos;s servers. As a result, Google receives your IP address and
                                 technical request data, such as your browser type and the page from which the fonts were requested. This allows the
@@ -99,7 +99,7 @@ export const SectionPrivacy = () => {
 
                         <div className="border-primary-medium border-l-2 pl-6">
                             <h2 className="font-outfit text-neutral-darker text-xl font-semibold md:text-2xl">7. Cookies</h2>
-                            <p className="font-manrope text-neutral-medium mt-3 text-base leading-relaxed text-justify">
+                            <p className="font-manrope text-neutral-medium mt-3 text-justify text-base leading-relaxed">
                                 We do not set cookies ourselves. Cloudflare may set strictly necessary cookies for security purposes, which do not
                                 require your consent.
                             </p>
@@ -107,7 +107,7 @@ export const SectionPrivacy = () => {
 
                         <div className="border-primary-medium border-l-2 pl-6">
                             <h2 className="font-outfit text-neutral-darker text-xl font-semibold md:text-2xl">8. Your Rights</h2>
-                            <p className="font-manrope text-neutral-medium mt-3 text-base leading-relaxed text-justify">
+                            <p className="font-manrope text-neutral-medium mt-3 text-justify text-base leading-relaxed">
                                 Under the GDPR, you have the right to access, rectify, or erase your personal data, to restrict or object to its
                                 processing, and to data portability where applicable. To exercise these rights, please contact us at legal@toujou.lu.
                                 You also have the right to lodge a complaint with a supervisory authority, in particular the Commission Nationale pour
@@ -126,7 +126,7 @@ export const SectionPrivacy = () => {
 
                         <div className="border-primary-medium border-l-2 pl-6">
                             <h2 className="font-outfit text-neutral-darker text-xl font-semibold md:text-2xl">9. Changes to This Policy</h2>
-                            <p className="font-manrope text-neutral-medium mt-3 text-base leading-relaxed text-justify">
+                            <p className="font-manrope text-neutral-medium mt-3 text-justify text-base leading-relaxed">
                                 We may update this policy from time to time. The current version is always available on this page, together with the
                                 date of the last update.
                             </p>

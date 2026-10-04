@@ -5,13 +5,18 @@ export const Footer = () => {
     const { t } = useTranslation("common");
 
     return (
-        <footer className="w-full bg-white lg:px-24 px-12 py-12">
+        <footer className="w-full bg-white px-12 py-12 lg:px-24">
             <div className="flex w-full flex-col items-start justify-between gap-12 lg:flex-row">
                 <div className="flex max-w-sm flex-col gap-y-3">
                     <h6 className="font-outfit text-2xl font-bold">Forty Tour</h6>
                     <p className="text-neutral-medium text-sm font-medium">{t("footer.description")}</p>
                 </div>
                 <div className="flex flex-wrap items-start gap-x-32 gap-y-8">
+                    <div className="flex min-w-40 flex-col gap-y-3">
+                        <h6 className="font-outfit text-xl font-bold">{t("footer.tour.title")}</h6>
+                        <FooterLink title={t("footer.tour.start")} href="/tour" />
+                        <FooterLink title={t("footer.tour.map")} href="/tour" />
+                    </div>
                     <div className="flex min-w-40 flex-col gap-y-3">
                         <h6 className="font-outfit text-xl font-bold">{t("footer.about.title")}</h6>
                         <FooterLink title={t("footer.about.privacy")} href="/privacy" />

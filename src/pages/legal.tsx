@@ -13,8 +13,9 @@ const LegalPage: NextPage = () => {
         <>
             <SeoHead path="/" title={t("meta.title")} description={t("meta.description")} robots="noindex, nofollow" />
             <div>
-                <Header />
+                <Header fillBackground />
                 <SectionLegal />
+                <div className="bg-neutral-lighter h-0.5 w-full" />
                 <Footer />
             </div>
         </>
