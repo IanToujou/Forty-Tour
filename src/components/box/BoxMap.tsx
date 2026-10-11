@@ -189,13 +189,7 @@ export const BoxMap = (props: BoxMapProps) => {
                             className="text-primary-medium overflow-visible"
                         >
                             <defs>
-                                <radialGradient
-                                    id="box-map-cone"
-                                    gradientUnits="userSpaceOnUse"
-                                    cx={CONE_RADIUS}
-                                    cy={CONE_RADIUS}
-                                    r={CONE_RADIUS}
-                                >
+                                <radialGradient id="box-map-cone" gradientUnits="userSpaceOnUse" cx={CONE_RADIUS} cy={CONE_RADIUS} r={CONE_RADIUS}>
                                     <stop offset="0%" stopColor="currentColor" stopOpacity="0.7" />
                                     <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
                                 </radialGradient>

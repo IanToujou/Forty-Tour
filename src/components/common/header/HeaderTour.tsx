@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const HeaderTour = () => {
     return (
-        <header className="absolute flex w-full items-center justify-between px-8 py-3">
+        <header className="absolute flex w-full items-center justify-between px-4 py-3 lg:px-8">
             <Link href="/" className="flex items-center justify-center rounded-full bg-white p-2 duration-200 hover:scale-110">
                 <LucideX />
             </Link>

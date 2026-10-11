@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from "next";
 import { useMemo, useRef, useState } from "react";
+import { LucideMap } from "lucide-react";
 import { VirtualTourPlugin } from "@photo-sphere-viewer/virtual-tour-plugin";
 import "@photo-sphere-viewer/virtual-tour-plugin/index.css";
 import { MarkersPlugin } from "@photo-sphere-viewer/markers-plugin";
@@ -28,6 +29,7 @@ const TourPage: NextPage = () => {
     const [loaderNode, setLoaderNode] = useState<Element | null>(null);
     const [mapPosition, setMapPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
     const [yaw, setYaw] = useState(0);
+    const [showMap, setShowMap] = useState(false);
 
     const handleNodeClick = (node: TourNode) => {
         const virtualTourPlugin = instanceRef.current?.getPlugin<VirtualTourPlugin>(VirtualTourPlugin);
@@ -98,7 +100,29 @@ const TourPage: NextPage = () => {
                 <div className="pointer-events-auto absolute top-0 left-0 z-1000 w-screen">
                     <HeaderTour />
                 </div>
-                <div className="pointer-events-auto absolute bottom-8 left-8 z-1000 flex flex-col gap-y-4">
+                <div className="pointer-events-auto absolute top-16 left-4 z-1000 flex flex-col items-start gap-y-4 md:hidden">
+                    <button
+                        onClick={() => setShowMap((v) => !v)}
+                        className="flex items-center justify-center rounded-full bg-white p-2 duration-200 hover:scale-110"
+                    >
+                        <LucideMap />
+                    </button>
+                    <AnimatePresence>
+                        {showMap && (
+                            <motion.div
+                                initial={{ opacity: 0, y: -8 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -8 }}
+                                transition={{ duration: 0.2, ease: "easeOut" }}
+                                className="flex flex-col gap-y-4"
+                            >
+                                <BoxLocation name={location} />
+                                <BoxMap x={mapPosition.x} y={mapPosition.y} zoom={0.5} yaw={yaw} nodes={nodes} onNodeClick={handleNodeClick} />
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+                <div className="pointer-events-auto absolute bottom-8 left-8 z-1000 hidden flex-col gap-y-4 md:flex">
                     <BoxLocation name={location} />
                     <BoxMap x={mapPosition.x} y={mapPosition.y} zoom={0.5} yaw={yaw} nodes={nodes} onNodeClick={handleNodeClick} />
                 </div>
