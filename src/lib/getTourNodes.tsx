@@ -1,6 +1,6 @@
 import type { TFunction } from "i18next";
 import { renderToStaticMarkup } from "react-dom/server";
-import { LucideBed, LucideComputer, LucideGamepad2, LucideSparkles, LucideSquareParking, LucideUtensils } from "lucide-react";
+import { LucideBed, LucideComputer, LucideDoorClosedLocked, LucideGamepad2, LucideSparkles, LucideSquareParking, LucideUtensils } from "lucide-react";
 import { BoxTooltip } from "@/components/box/BoxTooltip";
 import { VirtualTourNode } from "@photo-sphere-viewer/virtual-tour-plugin";
 
@@ -45,6 +45,27 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
         links: [
             { nodeId: "outside_18", position: { yaw: "270deg", pitch: "0deg" } },
             { nodeId: "parking_1", position: { yaw: "90deg", pitch: "0deg" } },
+        ],
+        markers: [
+            {
+                id: "marker-1",
+                polygon: [
+                    [4.2936, 0.0305],
+                    [4.3514, 0.032],
+                    [4.352, -0.0436],
+                    [4.2946, -0.0426],
+                ],
+                svgStyle: {
+                    fill: "rgba(147, 220, 50, 0.2)",
+                    stroke: "rgb(147 220 50)",
+                    strokeWidth: "8px",
+                },
+                tooltip: {
+                    content: renderToStaticMarkup(
+                        <BoxTooltip icon={LucideDoorClosedLocked} title={t("marker.gate.title")} description={t("marker.gate.description")} />
+                    ),
+                },
+            },
         ],
     },
     {

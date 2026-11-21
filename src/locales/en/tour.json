@@ -24,6 +24,10 @@
         "refectory_side": "Refectory Side Hall"
     },
     "marker": {
+        "gate": {
+            "title": "Main Gate",
+            "description": "The main gate is the entrance to the fort. It is locked at all time, but can be opened with a keycard and code you receive during your stay."
+        },
         "parking": {
             "title": "Free Parking",
             "description": "Free 24/7 parking during your stay at the fort in case you arrive by car."

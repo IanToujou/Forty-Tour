@@ -24,6 +24,10 @@
         "refectory_side": "Mensa Nebensaal"
     },
     "marker": {
+        "gate": {
+            "title": "Haupttor",
+            "description": "Das Haupttor ist der Eingang zum Fort. Es ist stets verschlossen, kann aber mit einer Zugangskarte und einem Code geöffnet werden, die Sie während Ihres Aufenthalts erhalten."
+        },
         "parking": {
             "title": "Kostenloser Parkplatz",
             "description": "Kostenloses Parken rund um die Uhr während deines Aufenthalts im Fort, falls du mit dem Auto anreist."

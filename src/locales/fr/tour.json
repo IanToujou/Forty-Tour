@@ -24,6 +24,10 @@
         "refectory_side": "Réfectoire Salle Latérale"
     },
     "marker": {
+        "gate": {
+            "title": "Porte principale",
+            "description": "La porte principale est l'entrée du fort. Elle est verrouillée en permanence, mais peut être ouverte avec une carte d'accès et un code que vous recevrez pendant votre séjour."
+        },
         "parking": {
             "title": "Parking gratuit",
             "description": "Parking gratuit 24h/24 pendant votre séjour au fort si vous venez en voiture."
