@@ -15,7 +15,7 @@ export const Footer = () => {
                     <div className="flex min-w-40 flex-col gap-y-3">
                         <h6 className="font-outfit text-xl font-bold">{t("footer.tour.title")}</h6>
                         <FooterLink title={t("footer.tour.start")} href="/tour" />
-                        <FooterLink title={t("footer.tour.map")} href="/tour" />
+                        <FooterLink title={t("footer.tour.map")} href="/map" />
                     </div>
                     <div className="flex min-w-40 flex-col gap-y-3">
                         <h6 className="font-outfit text-xl font-bold">{t("footer.about.title")}</h6>
