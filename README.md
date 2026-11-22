@@ -25,6 +25,6 @@ Please note that this project is not affiliated in any way with School 42 or the
 
 ## Support & Contribution
 
-Please make sure to have read the documentation regarding your issue. Feel free to contribute directly by opening a pull request, issue, or by contacting me directly for collaboration.
+Please make sure to have read the documentation regarding your issue. Feel free to contribute by opening a pull request, issue, or by contacting me directly for collaboration.
 
 You can always reach me via any linked social media account [on my profile](https://github.com/IanToujou).
