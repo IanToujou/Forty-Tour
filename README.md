@@ -10,7 +10,7 @@
 
 Forty Tour is a virtual 360° tour of the "Forty 2" campus, located on the Oléron Island in France. The fort is also known as the Fort des Saumonards and was built between 1810 and 1818 under the order of Napoléon to protect the coast. In 2019, the fort was purchased by School 42 and renovated to the point of what it is now.
 
-This project is just a personal side project by me. If you are a 42 student, my intra username is `ibour`.
+You can view the project [here](https://ft.toujou.lu). This project is just a personal side project by me. If you are a 42 student and looking to contact me, my intra username is `ibour`.
 
 Please note that this project is not affiliated in any way with School 42 or their administration. Permission for this project was granted by the local staff members.
 
