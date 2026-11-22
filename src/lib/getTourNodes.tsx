@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import {
     LucideBed,
     LucideBike,
+    LucideCoffee,
     LucideComputer,
     LucideCreditCard,
     LucideDoorClosedLocked,
@@ -518,6 +519,27 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
             { nodeId: "kitchen_2", position: { yaw: "180deg", pitch: "0deg" } },
             { nodeId: "kitchen_4", position: { yaw: "270deg", pitch: "0deg" } },
         ],
+        markers: [
+            {
+                id: "marker-1",
+                polygon: [
+                    [2.2434, -0.1497],
+                    [2.5241, -0.104],
+                    [2.6636, -0.1217],
+                    [2.3995, -0.1801],
+                ],
+                svgStyle: {
+                    fill: "rgba(20, 184, 166, 0.2)",
+                    stroke: "rgb(20, 184, 166)",
+                    strokeWidth: "8px",
+                },
+                tooltip: {
+                    content: renderToStaticMarkup(
+                        <BoxTooltip icon={LucideCoffee} title={t("marker.coffee.title")} description={t("marker.coffee.description")} />
+                    ),
+                },
+            },
+        ],
     },
     {
         id: "kitchen_2",
@@ -527,6 +549,27 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
         links: [
             { nodeId: "kitchen_1", position: { yaw: "0deg", pitch: "0deg" } },
             { nodeId: "kitchen_3", position: { yaw: "270deg", pitch: "0deg" } },
+        ],
+        markers: [
+            {
+                id: "marker-1",
+                polygon: [
+                    [0.4118, -0.1154],
+                    [0.5679, -0.0972],
+                    [0.7419, -0.1275],
+                    [0.6063, -0.1587],
+                ],
+                svgStyle: {
+                    fill: "rgba(20, 184, 166, 0.2)",
+                    stroke: "rgb(20, 184, 166)",
+                    strokeWidth: "8px",
+                },
+                tooltip: {
+                    content: renderToStaticMarkup(
+                        <BoxTooltip icon={LucideCoffee} title={t("marker.coffee.title")} description={t("marker.coffee.description")} />
+                    ),
+                },
+            },
         ],
     },
     {
@@ -875,7 +918,7 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
             {
                 id: "marker-1",
                 polygon: [
-                    [5.9550, 0.5686],
+                    [5.955, 0.5686],
                     [0.3157, 0.5742],
                     [0.3118, -0.6164],
                     [5.9498, -0.5993],

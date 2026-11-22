@@ -64,6 +64,10 @@
             "title": "Refectory",
             "description": "Refectory where meals are served 3 times per day."
         },
+        "coffee": {
+            "title": "Water & Drinks",
+            "description": "These machines provide cold water and a few drinks, including coffee or hot chocolate. They are available at all times so you don't get too thirsty in the heat."
+        },
         "bathroom": {
             "title": "Genderless Bathroom",
             "description": "These bathrooms are for both men and women."

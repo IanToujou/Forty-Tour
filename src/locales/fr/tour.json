@@ -64,6 +64,10 @@
             "title": "Réfectoire",
             "description": "Le réfectoire où les repas sont servis 3 fois par jour."
         },
+        "coffee": {
+            "title": "Eau & Boissons",
+            "description": "Ces distributeurs proposent de l'eau fraîche et quelques boissons, dont du café ou du chocolat chaud. Ils sont disponibles à tout moment pour que tu n'aies pas trop soif quand il fait chaud."
+        },
         "bathroom": {
             "title": "Toilettes mixtes",
             "description": "Ces toilettes sont accessibles aux hommes comme aux femmes."

@@ -64,6 +64,10 @@
             "title": "Mensa",
             "description": "In der Mensa werden dreimal am Tag Mahlzeiten serviert."
         },
+        "coffee": {
+            "title": "Wasser & Getränke",
+            "description": "Diese Automaten bieten kaltes Wasser und einige Getränke, darunter Kaffee oder heiße Schokolade. Sie sind jederzeit verfügbar, damit du bei der Hitze nicht zu durstig wirst."
+        },
         "bathroom": {
             "title": "Geschlechtsneutrale Toiletten",
             "description": "Diese Toiletten sind für Männer und Frauen gleichermaßen da."
