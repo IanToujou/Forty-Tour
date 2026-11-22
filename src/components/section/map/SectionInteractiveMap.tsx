@@ -1,8 +1,11 @@
-import { animate, motion, useMotionValue, useTransform } from "framer-motion";
-import { ReactNode, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { AnimatePresence, animate, motion, MotionValue, useMotionValue, useTransform } from "framer-motion";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { PointerEvent as ReactPointerEvent } from "react";
 import { useTranslation } from "react-i18next";
+import { LucideRotateCcw, LucideZoomIn, LucideZoomOut } from "lucide-react";
 import { SvgMap } from "@/components/svg/SvgMap";
+import { BoxMapTooltip } from "@/components/box/BoxMapTooltip";
+import { InputIconButton } from "@/components/input/InputIconButton";
 import { TourNode } from "@/lib/getTourNodes";
 
 export type SectionInteractiveMapProps = {
@@ -10,7 +13,6 @@ export type SectionInteractiveMapProps = {
 };
 
 const PADDING = 800;
-// Zoom levels are relative to "fit" (1 = the whole map exactly fits the screen)
 const MIN_ZOOM = 0.4;
 const INITIAL_ZOOM = 0.7;
 const MAX_ZOOM = 6;
@@ -18,7 +20,14 @@ const ZOOM_STEP = 1.6;
 const DRAG_THRESHOLD = 4;
 const HIDDEN_NODES = [/^community_/];
 
+const TOOLTIP_WIDTH = 336;
+const TOOLTIP_HEIGHT = 260;
+const TOOLTIP_EDGE_MARGIN = 12;
+const TOOLTIP_TOP_SAFE_AREA = 72;
+
 const isHidden = (id: string) => HIDDEN_NODES.some((re) => re.test(id));
+
+const getNodeImage = (node: TourNode) => (typeof node.panorama === "string" ? node.panorama : undefined);
 
 const transition = { type: "spring", stiffness: 260, damping: 30 } as const;
 
@@ -37,10 +46,17 @@ const clampAxis = (value: number, viewLen: number, contentLen: number) => {
 
 type Point = { x: number; y: number };
 
+type HoveredNode = {
+    node: TourNode;
+    placement: "above" | "below";
+    viewWidth: number;
+};
+
 export const SectionInteractiveMap = (props: SectionInteractiveMapProps) => {
     const { t } = useTranslation(["map"]);
 
     const [ready, setReady] = useState(false);
+    const [hovered, setHovered] = useState<HoveredNode | null>(null);
 
     const containerRef = useRef<HTMLDivElement>(null);
     const layerRef = useRef<HTMLDivElement>(null);
@@ -256,12 +272,20 @@ export const SectionInteractiveMap = (props: SectionInteractiveMapProps) => {
     };
 
     const handleNodeHover = (node: TourNode | null) => {
-        // TODO: implement what happens when a node is hovered (node is null when the pointer leaves)
-        console.log("Node hovered:", node ? `${node.id} ${node.name}` : null);
+        if (!node?.mapPosition) {
+            setHovered(null);
+            return;
+        }
+        const screenY = y.get() + node.mapPosition.y * scale.get();
+        setHovered({
+            node,
+            placement: screenY < TOOLTIP_HEIGHT + TOOLTIP_TOP_SAFE_AREA ? "below" : "above",
+            viewWidth: viewRef.current.w,
+        });
     };
 
     return (
-        <section className="bg-neutral-darker relative h-screen w-full overflow-hidden">
+        <section className="relative h-screen w-full overflow-hidden bg-gray-900">
             <div
                 ref={containerRef}
                 className="absolute inset-0 cursor-grab touch-none select-none active:cursor-grabbing"
@@ -304,39 +328,64 @@ export const SectionInteractiveMap = (props: SectionInteractiveMapProps) => {
                     })}
                 </motion.div>
             </div>
-
-            <div className="absolute right-6 bottom-6 flex flex-col gap-y-2 md:right-10 md:bottom-10">
-                <MapControlButton label={t("map:controls.zoomIn")} onClick={() => zoomBy(ZOOM_STEP)}>
-                    <path d="M12 5v14M5 12h14" />
-                </MapControlButton>
-                <MapControlButton label={t("map:controls.zoomOut")} onClick={() => zoomBy(1 / ZOOM_STEP)}>
-                    <path d="M5 12h14" />
-                </MapControlButton>
-                <MapControlButton label={t("map:controls.reset")} onClick={resetView}>
-                    <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
-                </MapControlButton>
+            <AnimatePresence>
+                {hovered && (
+                    <MapTooltipAnchor
+                        key={hovered.node.id}
+                        node={hovered.node}
+                        placement={hovered.placement}
+                        viewWidth={hovered.viewWidth}
+                        x={x}
+                        y={y}
+                        scale={scale}
+                    />
+                )}
+            </AnimatePresence>
+            <div className="absolute right-6 bottom-6 flex flex-col gap-y-3 md:right-10 md:bottom-10">
+                <InputIconButton icon={LucideZoomIn} onClick={() => zoomBy(ZOOM_STEP)} label={t("map:controls.zoomIn")} />
+                <InputIconButton icon={LucideZoomOut} onClick={() => zoomBy(1 / ZOOM_STEP)} label={t("map:controls.zoomOut")} />
+                <InputIconButton icon={LucideRotateCcw} onClick={resetView} label={t("map:controls.reset")} />
             </div>
         </section>
     );
 };
 
-type MapControlButtonProps = {
-    label: string;
-    onClick: () => void;
-    children: ReactNode;
+type MapTooltipAnchorProps = {
+    node: TourNode;
+    placement: "above" | "below";
+    viewWidth: number;
+    x: MotionValue<number>;
+    y: MotionValue<number>;
+    scale: MotionValue<number>;
 };
 
-const MapControlButton = (props: MapControlButtonProps) => (
-    <button
-        type="button"
-        aria-label={props.label}
-        title={props.label}
-        onClick={props.onClick}
-        onPointerDown={(e) => e.stopPropagation()}
-        className="bg-neutral-darker/90 border-neutral-medium hover:bg-primary-medium grid size-11 cursor-pointer place-items-center rounded-full border-2 text-white duration-200"
-    >
-        <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            {props.children}
-        </svg>
-    </button>
-);
+/**
+ * Follows the hovered dot while the map is panned or zoomed. It lives outside the scaled
+ * map layer, so the tooltip always keeps its normal size.
+ */
+const MapTooltipAnchor = (props: MapTooltipAnchorProps) => {
+    const mapX = props.node.mapPosition?.x ?? 0;
+    const mapY = props.node.mapPosition?.y ?? 0;
+    const above = props.placement === "above";
+
+    const left = useTransform([props.x, props.scale], (latest: number[]) => {
+        const half = TOOLTIP_WIDTH / 2 + TOOLTIP_EDGE_MARGIN;
+        return Math.min(Math.max(latest[0] + mapX * latest[1], half), props.viewWidth - half);
+    });
+    const top = useTransform([props.y, props.scale], (latest: number[]) => latest[0] + mapY * latest[1]);
+
+    return (
+        <motion.div className="pointer-events-none absolute top-0 left-0 z-10" style={{ x: left, y: top }}>
+            <div className={above ? "-translate-x-1/2 -translate-y-full pb-4" : "-translate-x-1/2 pt-4"}>
+                <motion.div
+                    initial={{ opacity: 0, y: above ? 6 : -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: above ? 6 : -6 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                >
+                    <BoxMapTooltip title={props.node.name ?? ""} imageUrl={getNodeImage(props.node)} />
+                </motion.div>
+            </div>
+        </motion.div>
+    );
+};

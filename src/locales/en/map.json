@@ -2,5 +2,10 @@
     "meta": {
         "title": "Interactive Map",
         "description": "Explore and interact with the campus from above by with the interactive map of Forty 2."
+    },
+    "controls": {
+        "zoomIn": "Zoom In",
+        "zoomOut": "Zoom Out",
+        "reset": "Reset Zoom"
     }
 }
