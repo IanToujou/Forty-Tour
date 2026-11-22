@@ -1,6 +1,16 @@
 import type { TFunction } from "i18next";
 import { renderToStaticMarkup } from "react-dom/server";
-import { LucideBed, LucideComputer, LucideDoorClosedLocked, LucideGamepad2, LucideSparkles, LucideSquareParking, LucideUtensils } from "lucide-react";
+import {
+    LucideBed,
+    LucideBike,
+    LucideComputer,
+    LucideDoorClosedLocked,
+    LucideGamepad2,
+    LucideMonitorCheck,
+    LucideSparkles,
+    LucideSquareParking,
+    LucideUtensils,
+} from "lucide-react";
 import { BoxTooltip } from "@/components/box/BoxTooltip";
 import { VirtualTourNode } from "@photo-sphere-viewer/virtual-tour-plugin";
 
@@ -87,6 +97,27 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
             { nodeId: "outside_12", position: { yaw: "0deg", pitch: "0deg" } },
             { nodeId: "outside_14", position: { yaw: "240deg", pitch: "0deg" } },
             { nodeId: "outside_18", position: { yaw: "90deg", pitch: "0deg" } },
+        ],
+        markers: [
+            {
+                id: "marker-1",
+                polygon: [
+                    [4.4846, -0.1882],
+                    [4.9859, -0.173],
+                    [5.2778, -0.3452],
+                    [4.3238, -0.3949],
+                ],
+                svgStyle: {
+                    fill: "rgba(147, 220, 50, 0.2)",
+                    stroke: "rgb(147 220 50)",
+                    strokeWidth: "8px",
+                },
+                tooltip: {
+                    content: renderToStaticMarkup(
+                        <BoxTooltip icon={LucideBike} title={t("marker.bike.title")} description={t("marker.bike.description")} />
+                    ),
+                },
+            },
         ],
     },
     {
@@ -500,6 +531,27 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
         links: [
             { nodeId: "outside_9", position: { yaw: "20deg", pitch: "0deg" } },
             { nodeId: "outside_13", position: { yaw: "180deg", pitch: "0deg" } },
+        ],
+        markers: [
+            {
+                id: "marker-1",
+                polygon: [
+                    [1.9935, 0.2561],
+                    [2.2012, 0.2272],
+                    [2.199, -0.2496],
+                    [1.9919, -0.2799],
+                ],
+                svgStyle: {
+                    fill: "rgba(147, 220, 50, 0.2)",
+                    stroke: "rgb(147 220 50)",
+                    strokeWidth: "8px",
+                },
+                tooltip: {
+                    content: renderToStaticMarkup(
+                        <BoxTooltip icon={LucideMonitorCheck} title={t("marker.bocal.title")} description={t("marker.bocal.description")} />
+                    ),
+                },
+            },
         ],
     },
     {

@@ -1,0 +1,12 @@
+{
+    "http": {
+        "404": {
+            "title": "Not Found",
+            "description": "The page you are looking for does not exist."
+        },
+        "500": {
+            "title": "Internal Error",
+            "description": "An internal error occurred. Please try again later or contact us."
+        }
+    }
+}

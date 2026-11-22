@@ -1,5 +1,7 @@
 import "i18next";
 import type common from "@/locales/en/common.json";
+import type error from "@/locales/en/error.json";
+import type form from "@/locales/en/form.json";
 import type home from "@/locales/en/home.json";
 import type tour from "@/locales/en/tour.json";
 import type privacy from "@/locales/en/privacy.json";
@@ -10,6 +12,8 @@ declare module "i18next" {
         defaultNS: "common";
         resources: {
             common: typeof common;
+            error: typeof error;
+            form: typeof form;
             home: typeof home;
             tour: typeof tour;
             privacy: typeof privacy;

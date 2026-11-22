@@ -32,6 +32,14 @@
             "title": "Kostenloser Parkplatz",
             "description": "Kostenloses Parken rund um die Uhr während deines Aufenthalts im Fort, falls du mit dem Auto anreist."
         },
+        "bike": {
+            "title": "Fahrräder zum Ausleihen",
+            "description": "Fahrräder können kostenlos genutzt werden. Sie befinden sich im zentralen Bereich und können verwendet werden, um auf dem Campus oder der Insel herumzufahren. Falls ein Licht benötigt wird, hilft dir das Team gerne weiter."
+        },
+        "bocal": {
+            "title": "Bocal (Büro des Teams)",
+            "description": "Das Bocal ist das Hauptbüro des Teams. Wenn du Hilfe benötigst, kannst du dich hier melden."
+        },
         "gaming": {
             "title": "Gaming-Raum",
             "description": "Der Gaming-Raum ist rund um die Uhr geöffnet. Hier kannst du jederzeit Filme schauen oder einfach spielen, auch Videospiele."

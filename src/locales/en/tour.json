@@ -32,9 +32,17 @@
             "title": "Free Parking",
             "description": "Free 24/7 parking during your stay at the fort in case you arrive by car."
         },
+        "bike": {
+            "title": "Bikes to Take",
+            "description": "Bikes are available to take for free. They are located in the central area and can be used to cycle around the campus or island. If a light is required, staff will be able to assist you."
+        },
+        "bocal": {
+            "title": "Bocal (Staff Office)",
+            "description": "The bocal is the main office of the staff. If you need any assistance, you can do it here."
+        },
         "gaming": {
             "title": "Gaming Room",
-            "description": "The gaming room is open 24/7 and can always be used to watch movies or just play games, including videogames."
+            "description": "The gaming room is open 24/7 and can always be used to watch movies or just play games, including video games."
         },
         "community": {
             "title": "Community Building",

@@ -1,0 +1,12 @@
+{
+    "http": {
+        "404": {
+            "title": "Nicht gefunden",
+            "description": "Die gesuchte Seite existiert nicht."
+        },
+        "500": {
+            "title": "Interner Fehler",
+            "description": "Ein interner Fehler ist aufgetreten. Bitte versuche es später erneut oder kontaktiere uns."
+        }
+    }
+}

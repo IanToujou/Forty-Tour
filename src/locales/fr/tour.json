@@ -1,10 +1,10 @@
 {
     "meta": {
         "title": "Forty Tour",
-        "description": "Une visite virtuelle à 360° du campus Forty 2 sur l'île d'Oléron. Explorez le campus et interagissez librement avec les différents espaces."
+        "description": "Une visite virtuelle à 360° du campus Forty 2 sur l'île d'Oléron. Explore le campus et interagis librement avec les différents espaces."
     },
     "label": {
-        "enter": "Cliquez pour entrer"
+        "enter": "Clique pour entrer"
     },
     "node": {
         "parking": "Parking Extérieur",
@@ -26,15 +26,23 @@
     "marker": {
         "gate": {
             "title": "Porte principale",
-            "description": "La porte principale est l'entrée du fort. Elle est verrouillée en permanence, mais peut être ouverte avec une carte d'accès et un code que vous recevrez pendant votre séjour."
+            "description": "La porte principale est l'entrée du fort. Elle est verrouillée en permanence, mais peut être ouverte avec une carte d'accès et un code que tu recevras pendant ton séjour."
         },
         "parking": {
             "title": "Parking gratuit",
-            "description": "Parking gratuit 24h/24 pendant votre séjour au fort si vous venez en voiture."
+            "description": "Parking gratuit 24h/24 pendant ton séjour au fort si tu viens en voiture."
+        },
+        "bike": {
+            "title": "Vélos à emprunter",
+            "description": "Des vélos sont à disposition gratuitement. Ils se trouvent dans la zone centrale et peuvent être utilisés pour se déplacer sur le campus ou sur l'île. Si un éclairage est nécessaire, l'équipe pourra t'aider."
+        },
+        "bocal": {
+            "title": "Bocal (Bureau du staff)",
+            "description": "Le Bocal est le bureau principal du staff. Si tu as besoin d'aide, tu peux t'y adresser."
         },
         "gaming": {
             "title": "Salle de jeux",
-            "description": "La salle de jeux est ouverte 24h/24. Vous pouvez y regarder des films ou simplement jouer, notamment aux jeux vidéo."
+            "description": "La salle de jeux est ouverte 24h/24. Tu peux y regarder des films ou simplement jouer, notamment aux jeux vidéo."
         },
         "community": {
             "title": "Bâtiment Community",
@@ -42,7 +50,7 @@
         },
         "cluster": {
             "title": "Clusters",
-            "description": "Les clusters sont ouverts à toute heure et prêts à l'emploi si vous souhaitez travailler."
+            "description": "Les clusters sont ouverts à toute heure et prêts à l'emploi si tu veux travailler."
         },
         "dorm": {
             "title": "Dortoir 4",
