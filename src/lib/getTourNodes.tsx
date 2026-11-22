@@ -4,11 +4,13 @@ import {
     LucideBed,
     LucideBike,
     LucideComputer,
+    LucideCreditCard,
     LucideDoorClosedLocked,
     LucideGamepad2,
     LucideMonitorCheck,
     LucideSparkles,
     LucideSquareParking,
+    LucideToilet,
     LucideUtensils,
 } from "lucide-react";
 import { BoxTooltip } from "@/components/box/BoxTooltip";
@@ -34,8 +36,8 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
                     [3.5711, -0.157],
                 ],
                 svgStyle: {
-                    fill: "rgba(147, 220, 50, 0.2)",
-                    stroke: "rgb(147 220 50)",
+                    fill: "rgba(20, 184, 166, 0.2)",
+                    stroke: "rgb(20, 184, 166)",
                     strokeWidth: "8px",
                 },
                 tooltip: {
@@ -66,8 +68,8 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
                     [4.2946, -0.0426],
                 ],
                 svgStyle: {
-                    fill: "rgba(147, 220, 50, 0.2)",
-                    stroke: "rgb(147 220 50)",
+                    fill: "rgba(20, 184, 166, 0.2)",
+                    stroke: "rgb(20, 184, 166)",
                     strokeWidth: "8px",
                 },
                 tooltip: {
@@ -86,6 +88,46 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
         links: [
             { nodeId: "outside_13", position: { yaw: "270deg", pitch: "0deg" } },
             { nodeId: "parking_2", position: { yaw: "90deg", pitch: "0deg" } },
+        ],
+        markers: [
+            {
+                id: "marker-1",
+                polygon: [
+                    [2.674, -0.0518],
+                    [2.732, -0.0528],
+                    [2.7323, -0.1229],
+                    [2.674, -0.1229],
+                ],
+                svgStyle: {
+                    fill: "rgba(20, 184, 166, 0.2)",
+                    stroke: "rgb(20, 184, 166)",
+                    strokeWidth: "8px",
+                },
+                tooltip: {
+                    content: renderToStaticMarkup(
+                        <BoxTooltip icon={LucideCreditCard} title={t("marker.exit.title")} description={t("marker.exit.description")} />
+                    ),
+                },
+            },
+            {
+                id: "marker-2",
+                polygon: [
+                    [4.5984, -0.0834],
+                    [4.8154, -0.0838],
+                    [4.8652, -0.138],
+                    [4.5545, -0.1392],
+                ],
+                svgStyle: {
+                    fill: "rgba(20, 184, 166, 0.2)",
+                    stroke: "rgb(20, 184, 166)",
+                    strokeWidth: "8px",
+                },
+                tooltip: {
+                    content: renderToStaticMarkup(
+                        <BoxTooltip icon={LucideBike} title={t("marker.bike.title")} description={t("marker.bike.description")} />
+                    ),
+                },
+            },
         ],
     },
     {
@@ -108,8 +150,8 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
                     [4.3238, -0.3949],
                 ],
                 svgStyle: {
-                    fill: "rgba(147, 220, 50, 0.2)",
-                    stroke: "rgb(147 220 50)",
+                    fill: "rgba(20, 184, 166, 0.2)",
+                    stroke: "rgb(20, 184, 166)",
                     strokeWidth: "8px",
                 },
                 tooltip: {
@@ -542,8 +584,8 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
                     [1.9919, -0.2799],
                 ],
                 svgStyle: {
-                    fill: "rgba(147, 220, 50, 0.2)",
-                    stroke: "rgb(147 220 50)",
+                    fill: "rgba(20, 184, 166, 0.2)",
+                    stroke: "rgb(20, 184, 166)",
                     strokeWidth: "8px",
                 },
                 tooltip: {
@@ -784,6 +826,27 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
             { nodeId: "outside_3", position: { yaw: "270deg", pitch: "0deg" } },
             { nodeId: "outside_2", position: { yaw: "325deg", pitch: "0deg" } },
             { nodeId: "outside_8", position: { yaw: "180deg", pitch: "0deg" } },
+        ],
+        markers: [
+            {
+                id: "marker-1",
+                polygon: [
+                    [0.9044, 0.2502],
+                    [1.0894, 0.289],
+                    [1.0899, -0.303],
+                    [0.9082, -0.2645],
+                ],
+                svgStyle: {
+                    fill: "rgba(20, 184, 166, 0.2)",
+                    stroke: "rgb(20, 184, 166)",
+                    strokeWidth: "8px",
+                },
+                tooltip: {
+                    content: renderToStaticMarkup(
+                        <BoxTooltip icon={LucideToilet} title={t("marker.bathroom.title")} description={t("marker.bathroom.description")} />
+                    ),
+                },
+            },
         ],
     },
     {

@@ -32,6 +32,10 @@
             "title": "Free Parking",
             "description": "Free 24/7 parking during your stay at the fort in case you arrive by car."
         },
+        "exit": {
+            "title": "Badge Exit",
+            "description": "To exit the campus, you can use your badge to open the gate."
+        },
         "bike": {
             "title": "Bikes to Take",
             "description": "Bikes are available to take for free. They are located in the central area and can be used to cycle around the campus or island. If a light is required, staff will be able to assist you."
@@ -59,6 +63,10 @@
         "refectory": {
             "title": "Refectory",
             "description": "Refectory where meals are served 3 times per day."
+        },
+        "bathroom": {
+            "title": "Genderless Bathroom",
+            "description": "These bathrooms are for both men and women."
         }
     }
 }

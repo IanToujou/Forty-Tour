@@ -32,6 +32,10 @@
             "title": "Kostenloser Parkplatz",
             "description": "Kostenloses Parken rund um die Uhr während deines Aufenthalts im Fort, falls du mit dem Auto anreist."
         },
+        "exit": {
+            "title": "Ausgang per Badge",
+            "description": "Um den Campus zu verlassen, kannst du das Tor mit deinem Badge öffnen."
+        },
         "bike": {
             "title": "Fahrräder zum Ausleihen",
             "description": "Fahrräder können kostenlos genutzt werden. Sie befinden sich im zentralen Bereich und können verwendet werden, um auf dem Campus oder der Insel herumzufahren. Falls ein Licht benötigt wird, hilft dir das Team gerne weiter."
@@ -59,6 +63,10 @@
         "refectory": {
             "title": "Mensa",
             "description": "In der Mensa werden dreimal am Tag Mahlzeiten serviert."
+        },
+        "bathroom": {
+            "title": "Geschlechtsneutrale Toiletten",
+            "description": "Diese Toiletten sind für Männer und Frauen gleichermaßen da."
         }
     }
 }

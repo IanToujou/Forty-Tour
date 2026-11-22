@@ -32,6 +32,10 @@
             "title": "Parking gratuit",
             "description": "Parking gratuit 24h/24 pendant ton séjour au fort si tu viens en voiture."
         },
+        "exit": {
+            "title": "Sortie avec badge",
+            "description": "Pour quitter le campus, tu peux utiliser ton badge pour ouvrir la porte."
+        },
         "bike": {
             "title": "Vélos à emprunter",
             "description": "Des vélos sont à disposition gratuitement. Ils se trouvent dans la zone centrale et peuvent être utilisés pour se déplacer sur le campus ou sur l'île. Si un éclairage est nécessaire, l'équipe pourra t'aider."
@@ -59,6 +63,10 @@
         "refectory": {
             "title": "Réfectoire",
             "description": "Le réfectoire où les repas sont servis 3 fois par jour."
+        },
+        "bathroom": {
+            "title": "Toilettes mixtes",
+            "description": "Ces toilettes sont accessibles aux hommes comme aux femmes."
         }
     }
 }
