@@ -871,6 +871,34 @@ export const getTourNodes = (t: TFunction<"tour">): TourNode[] => [
             { nodeId: "cluster_1", position: { yaw: "0deg", pitch: "0deg" } },
             { nodeId: "gaming_1", position: { yaw: "80deg", pitch: "0deg" } },
         ],
+        markers: [
+            {
+                id: "marker-1",
+                polygon: [
+                    [5.9550, 0.5686],
+                    [0.3157, 0.5742],
+                    [0.3118, -0.6164],
+                    [5.9498, -0.5993],
+                ],
+                svgStyle: {
+                    fill: "rgba(147, 220, 50, 0.2)",
+                    stroke: "rgb(147 220 50)",
+                    strokeWidth: "8px",
+                },
+                tooltip: {
+                    content: renderToStaticMarkup(
+                        <BoxTooltip
+                            icon={LucideComputer}
+                            title={t("marker.cluster.title")}
+                            description={t("marker.cluster.description")}
+                            clickable
+                            clickLabel={t("label.enter")}
+                        />
+                    ),
+                },
+                data: { targetNode: "cluster_1" },
+            },
+        ],
     },
     {
         name: t("node.cluster"),
