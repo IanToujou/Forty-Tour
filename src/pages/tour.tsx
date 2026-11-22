@@ -85,7 +85,7 @@ const TourPage: NextPage = () => {
     return (
         <>
             <SeoHead path="/" title={t("meta.title")} description={t("meta.description")} robots="noindex, nofollow" />
-            <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
+            <div className="relative h-dvh w-full">
                 <ReactPhotoSphereViewer
                     height="100%"
                     width="100%"
@@ -97,7 +97,7 @@ const TourPage: NextPage = () => {
                     minFov={30}
                     src={undefined as unknown as string}
                 />
-                <div className="pointer-events-auto absolute top-0 left-0 z-1000 w-screen">
+                <div className="pointer-events-auto absolute top-0 left-0 z-1000 w-full">
                     <HeaderTour />
                 </div>
                 <div className="pointer-events-auto absolute top-16 left-4 z-1000 flex flex-col items-start gap-y-4 md:hidden">

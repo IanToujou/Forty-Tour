@@ -285,7 +285,7 @@ export const SectionInteractiveMap = (props: SectionInteractiveMapProps) => {
     };
 
     return (
-        <section className="relative h-screen w-full overflow-hidden bg-gray-900">
+        <section className="relative h-dvh w-full overflow-hidden bg-gray-900">
             <div
                 ref={containerRef}
                 className="absolute inset-0 cursor-grab touch-none select-none active:cursor-grabbing"

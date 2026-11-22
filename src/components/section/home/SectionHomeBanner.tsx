@@ -8,11 +8,11 @@ export const SectionHomeBanner = () => {
     const { t } = useTranslation("home");
 
     return (
-        <div>
-            <div className="absolute -z-10 h-screen w-screen bg-black select-none">
+        <div className="relative isolate h-dvh w-full">
+            <div className="absolute inset-0 -z-10 bg-black select-none">
                 <Image src="/img/landing.png" alt="Fort des saumonards" loading="eager" fill className="object-cover" />
             </div>
-            <div className="flex h-screen w-screen flex-col items-center justify-center text-center">
+            <div className="flex h-full w-full flex-col items-center justify-center text-center">
                 <motion.p
                     initial={{ opacity: 0, translateY: -10 }}
                     whileInView={{ opacity: 1, translateY: 0 }}
